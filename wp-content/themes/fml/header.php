@@ -143,7 +143,9 @@
                     $logo_link = get_option('lime_logo_link');
                     $logo_link = ($logo_link) ? $logo_link : home_url();
                     ?>
-                    <a class="logo" href="<?php echo $logo_link; ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo2.png" class="img-responsive" alt="LOGO"></a>
+                    <a class="logo" href="<?php echo $logo_link; ?>">
+                        <img src="<?php bloginfo('template_url'); ?>/img/logo-header.jpg" class="img-responsive" alt="LOGO">
+                    </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->

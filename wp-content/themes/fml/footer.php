@@ -1,32 +1,25 @@
 
 <footer id="footer">
-    <div class="container">
-        <hr class="footer-line">
-        <div class="row">
-            <div class="footer-container">
-                <?php
-                $logo_link = get_option('lime_logo_link');
-                $logo_link = ($logo_link) ? $logo_link : home_url();
-                ?>
-                <div class="col-sm-4">
-                    <a class="logo" href="<?php echo $logo_link; ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo2.png" class="img-responsive" alt="LOGO"></a>
+    <div class="footer-top section-p">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo-footer.jpg" />
                 </div>
+                <div class="col-sm-3">
 
-                <div class="col-sm-8 text-right">
-                    <ul id="footer-contact" class="contact-top">
-                        <li  class="caller-list"> 
-                            <a href="tel:<?php echo get_option('lime_contact'); ?>" class="call">
-                                <img src="<?php bloginfo('template_url'); ?>/img/phone-call.png" /><?php echo get_option('lime_contact'); ?>
-                            </a>
-                        </li>
-                        <li class="fb"><a href="<?php echo get_option('lime_fb'); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li class="linkedin"><a href="<?php echo get_option('lime_in'); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li class="copyright">&copy; 2016 All rights reserved</li>
-                    </ul>
                 </div>
-                <div class="clearfix"></div>
+                <div class="col-sm-3">
+
+                </div>
+                <div class="col-sm-3">
+
+                </div>
             </div>
         </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="text-center text-white">Fallu McMillan Pvt ltd @copy | Website by Suchandan Haldar </div>
     </div>
 </footer>
 <!-- jQuery -->
@@ -68,7 +61,7 @@
             $('[data-atr="#' + id + '"]').siblings().hide();
             $('[data-atr="#' + id + '"]').show();
         });
-        $('li.menu-item-has-children').click(function(){
+        $('li.menu-item-has-children').click(function () {
             $(this).children('ul.sub-menu').slideToggle();
         });
 

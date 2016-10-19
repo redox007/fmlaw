@@ -1,0 +1,84 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19 Oct, 2016, 11:57:36 PM
+    Author     : SUCHANDAN
+*/
+
+.section-m{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.section-md{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.section-tm{
+    margin-top: 30px;
+}
+.section-bm{
+    margin-bottom: 30px;
+}
+
+.section-p{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.section-pd{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.section-bp{
+    padding-bottom: 30px;
+}
+.section-tp{
+    padding-top: 30px;
+}
+
+.squize-text{
+    padding: 0 10%;
+}
+.service img{
+    margin: 0 auto;
+}
+.service p{
+    text-align: center;
+}
+
+.who-we-are{
+    background: url("../img/who-we-are.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.news-latter .form-control{
+    width: 100%;
+    border-radius: 0;
+}
+
+.contact-buttton {
+    color: #fff;
+    background: #006a9a;
+}
+.contact-buttton:hover{
+    color: #fff;
+}
+.whats-new{
+    background-color: #5c5d61;
+}
+
+.news-heading{
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-top{
+    background: #0a3b61;
+}
+.footer-bottom{
+    background: #000e25;
+    padding: 15px 0;
+}
