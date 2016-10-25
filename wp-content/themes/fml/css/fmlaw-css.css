@@ -12,6 +12,10 @@ and open the template in the editor.
     margin-top: 30px;
     margin-bottom: 30px;
 }
+.section-ms{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 .section-md{
     margin-top: 60px;
     margin-bottom: 60px;
@@ -19,13 +23,23 @@ and open the template in the editor.
 .section-tm{
     margin-top: 30px;
 }
+.section-tmd{
+    margin-top: 60px;
+}
 .section-bm{
     margin-bottom: 30px;
+}
+.section-bmd{
+    margin-bottom: 60px;
 }
 
 .section-p{
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.section-ps{
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .section-pd{
     padding-top: 60px;
@@ -34,8 +48,14 @@ and open the template in the editor.
 .section-bp{
     padding-bottom: 30px;
 }
+.section-bpd{
+    padding-bottom: 60px;
+}
 .section-tp{
     padding-top: 30px;
+}
+.section-tpd{
+    padding-top: 60px;
 }
 
 .squize-text{
@@ -81,4 +101,74 @@ and open the template in the editor.
 .footer-bottom{
     background: #000e25;
     padding: 15px 0;
+}
+
+.banner-text{
+    width: 100%;
+    position: absolute;
+    top: 35%;
+}
+
+.banner-text h2{
+    margin: 30px 0;
+}
+.arrow-down{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.arrow-down span{
+    font-size: 20px;
+}
+.banner{
+    position: relative;
+}
+.banner.static{
+    /*height: 100px;*/
+    background-position: center center;
+    background-size: cover;
+}
+
+.team img{
+    width: auto;
+    margin: 0 auto;
+}
+.team p{
+    margin: 15px 0;
+    text-align: center;
+}
+
+.relataed-area{
+    background-color: #f8f8f8;
+}
+
+.carousel-control.left{
+    left: -35px;
+    width: 30px;
+    background: none;
+    color: #006a9a;
+}
+.carousel-control.right{
+    right: -35px;
+    width: 30px;
+    background: none;
+    color: #006a9a;
+}
+.footer-top h4{
+    margin-top: 30px;
+}
+
+.relataed-area .item img{margin: 0 auto;}
+.relataed-area .item p{margin: 15px auto;}
+
+#contact{
+    background-color: #006a9a;
+}
+
+.contact-button-submit{
+    padding: 5px 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
 }

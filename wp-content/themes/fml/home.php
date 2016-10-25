@@ -12,15 +12,15 @@
             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="<?php echo get_bloginfo('template_url'); ?>/img/banner-1.jpg" alt="First slide">
-            </div>
-            <div class="item">
-                <img src="<?php echo get_bloginfo('template_url'); ?>/img/banner-1.jpg" alt="Second slide">
-            </div>
-            <div class="item">
-                <img src="<?php echo get_bloginfo('template_url'); ?>/img/banner-1.jpg" alt="Third slide">
-            </div>
+            <?php for ($i = 0; $i < 3; $i++) { ?>
+                <div class="item <?php echo $i == 0 ? 'active' : ''; ?>">
+                    <div class="banner-text text-center">
+                        <h2 class="title text-white">Lighting the way whatever your situation</h2>
+                        <a class="btn btn-lrn-more btn-lrn-more-white" href="#">Learn More</a>
+                    </div>
+                    <img src="<?php echo get_bloginfo('template_url'); ?>/img/banner-1.jpg" alt="First slide">
+                </div>
+            <?php } ?>
         </div>
         <!--        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                     <span class="icon-prev" aria-hidden="true"></span>
@@ -30,6 +30,9 @@
                     <span class="icon-next" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>-->
+        <div class="arrow-down text-center text-white">
+            <span class="glyphicon glyphicon-menu-down"></span>
+        </div>
     </div>
 </div>
 <div class="section-pd what-we-do">

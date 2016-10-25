@@ -214,9 +214,11 @@ ul.contact-top li.contact-buttton {
     padding: 0 20px;
 }
 
+
 #top-bar {
     border-bottom: 1px solid #006a9a;
     margin-bottom: 25px;
+    margin-top: -1px;
 }
 
 #top-bar a {
@@ -316,7 +318,7 @@ ul.contact-top li.contact-buttton {
 
 #services {
     /*background: url('img/who-we-are.png');*/
-	background: #006a9a;
+    background: #006a9a;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

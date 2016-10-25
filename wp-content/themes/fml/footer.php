@@ -1,19 +1,22 @@
 
 <footer id="footer">
     <div class="footer-top section-p">
-        <div class="container">
+        <div class="container text-white">
             <div class="row">
                 <div class="col-sm-3">
                     <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo-footer.jpg" />
                 </div>
                 <div class="col-sm-3">
-
+                    <h4 class="title ">Location</h4
+                    <p>176 Brisbane Street Ipswich Qld 4305</p>
                 </div>
                 <div class="col-sm-3">
-
+                    <h4 class="title">Contact</h4
+                    <p>176 Brisbane Street Ipswich Qld 4305</p>
                 </div>
                 <div class="col-sm-3">
-
+                    <h4 class="title">Quick Links</h4
+                    <p>176 Brisbane Street Ipswich Qld 4305</p>
                 </div>
             </div>
         </div>

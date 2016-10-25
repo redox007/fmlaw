@@ -120,14 +120,14 @@
                 <div id="top-bar">
                     <div class="row">
                         <div class="col-sm-6 text-left">
-                            <a href="tel:<?php echo get_option('lime_contact'); ?>" class="call">
-                                <img src="<?php bloginfo('template_url'); ?>/img/phone-call.png" /><?php echo get_option('lime_contact'); ?>
+                            <a href="tel:<?php echo get_option('fmlaw_contact'); ?>" class="call">
+                                <img src="<?php bloginfo('template_url'); ?>/img/phone-call.png" /><?php echo get_option('fmlaw_contact'); ?>
                             </a>
                         </div>
                         <div class="col-sm-6 text-right">
                             <ul class="contact-top">
-                                <li class="fb"><a href="<?php echo get_option('lime_fb'); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li class="linkedin"><a href="<?php echo get_option('lime_in'); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li class="fb"><a href="<?php echo get_option('fmlaw_fb'); ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="linkedin"><a href="<?php echo get_option('fmlaw_in'); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                 <li class="contact-buttton"><a href="#"  data-toggle="collapse" data-target="#contact">Contact</a></li>
                             </ul>
                         </div>
@@ -140,7 +140,7 @@
                         <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                     </button>
                     <?php
-                    $logo_link = get_option('lime_logo_link');
+                    $logo_link = get_option('fmlaw_logo_link');
                     $logo_link = ($logo_link) ? $logo_link : home_url();
                     ?>
                     <a class="logo" href="<?php echo $logo_link; ?>">
@@ -151,7 +151,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <?php
-                    $menu = (get_post_meta(get_the_ID(), '_lime_page_menu', true));
+                    $menu = (get_post_meta(get_the_ID(), '_fmlaw_page_menu', true));
                     $menu_arg = array(
                         'container' => 'ul',
                         'menu_class' => 'nav navbar-nav navbar-right',

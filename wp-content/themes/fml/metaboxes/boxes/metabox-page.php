@@ -17,13 +17,13 @@ function page_menu_post_meta_info() {
     echo '<input type="hidden" name="pagemeta_intro_noncename" id="pagemeta_intro_noncename" value="' .
     wp_create_nonce(plugin_basename(__FILE__)) . '" />';
 
-    $prefix = "_lime_";
+    $prefix = "_fmlaw_";
     $menus = get_terms('nav_menu', array('hide_empty' => true));
 //    print_r($menus);
     $page_menu_intro = get_post_meta($post->ID, $prefix . 'page_menu', true);
     ?>
     <h3>Choose Header menu</h3>
-    <select name="_lime_page_menu">
+    <select name="_fmlaw_page_menu">
         <option>Select Page Menu</option>
         <?php foreach ($menus as $key => $value) { ?>
         <option <?php echo ($page_menu_intro == $value->term_id) ? 'selected' : '';?> value="<?php echo $value->term_id; ?>"><?php echo $value->name; ?></option>
@@ -57,11 +57,11 @@ function wpt_save_page_menu_meta($post_id) {
     }
 
     /* Get the posted data and sanitize it for use as an HTML class. */
-    $new_meta_value = $_POST['_lime_page_menu'];
+    $new_meta_value = $_POST['_fmlaw_page_menu'];
 
 
     /* Get the meta key. */
-    $meta_key = '_lime_page_menu';
+    $meta_key = '_fmlaw_page_menu';
 
 
     /* Get the meta value of the custom field key. */

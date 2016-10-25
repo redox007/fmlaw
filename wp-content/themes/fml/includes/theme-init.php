@@ -41,9 +41,9 @@ endif;
 /* News */
 
 function pim_post_type_news() {
-
-    register_post_type('news', array(
-        'label' => __('News'),
+    
+    register_post_type('article', array(
+        'label' => __('Article'),
         'public' => true,
         'show_ui' => true,
         'show_in_nav_menus' => false,
@@ -68,6 +68,24 @@ function pim_post_type_news() {
             'excerpt')
             )
     );
+    
+    register_post_type('team', array(
+        'label' => __('Team'),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_nav_menus' => false,
+        'menu_position' => 7,
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail',
+            'excerpt')
+            )
+    );
+    
+    add_post_type_support( 'service', 'wps_subtitle' );
+    add_post_type_support( 'team', 'wps_subtitle' );
+    add_post_type_support( 'article', 'wps_subtitle' );
 }
 
 add_action('init', 'pim_post_type_news');
