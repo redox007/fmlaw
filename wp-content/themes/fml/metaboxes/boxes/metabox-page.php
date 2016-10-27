@@ -1,7 +1,7 @@
 <?php
 //page Post categoryFrom page
-add_action('add_meta_boxes', 'add_page_menu_metaboxes');
-add_action('save_post', 'wpt_save_page_menu_meta');
+//add_action('add_meta_boxes', 'add_page_menu_metaboxes');
+//add_action('save_post', 'wpt_save_page_menu_meta');
 
 // Add the Events Meta Boxes
 // Add the Events Meta Boxes

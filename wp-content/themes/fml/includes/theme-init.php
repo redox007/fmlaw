@@ -15,8 +15,10 @@ if (!function_exists('pim_setup')):
             add_theme_support('post-thumbnails');
             set_post_thumbnail_size(204, 162, false); // Normal post thumbnail
             
-            add_image_size('wwd', 130, 90, false); // Normal post thumbnail
-            add_image_size('news', 340, 155, false); // Normal post thumbnail
+            add_image_size('service', 124, 96, false); // Normal post thumbnail
+            add_image_size('article', 360, 184, false); // Normal post thumbnail
+            add_image_size('team', 173, 173, false); // Normal post thumbnail
+            add_image_size('slider', 1520, 560, false); // Normal post thumbnail
         }
 
         // Add default posts and comments RSS feed pims to head
@@ -51,6 +53,18 @@ function pim_post_type_news() {
         'supports' => array(
             'title',
             'editor',
+            'thumbnail',
+            'excerpt')
+            )
+    );
+    register_post_type('slider', array(
+        'label' => __('Slider'),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_nav_menus' => false,
+        'menu_position' => 7,
+        'supports' => array(
+            'title',
             'thumbnail')
             )
     );

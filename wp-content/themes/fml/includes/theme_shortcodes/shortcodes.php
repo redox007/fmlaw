@@ -8,14 +8,14 @@ function shortcode_learn_more($atts, $content = null, $shortcodename = "") {
     $output = '';
     extract(shortcode_atts(array(
         "link" => '#',
-        'color' => 'green',
+        'color' => 'blue',
         'text' => 'Learn More'
                     ), $atts));
     $c = 'btn btn-lrn-more';
     if ($color == 'white') {
         $c = 'btn btn-lrn-more btn-lrn-more-white';
     }
-    $output .= '<a class="' . $c . '" href="' . $link . '">' . $text . '</a>';
+    $output .= '<div class="text-center"><a class="' . $c . '" href="' . $link . '">' . $text . '</a></div>';
 
     return $output;
 }
@@ -48,6 +48,21 @@ function shortcode_block($atts, $content = null, $shortcodename = "") {
     $output .= '<div class="' . $class . '">';
     $output .= do_shortcode($content);
     $output .= '</div>';
+
+    return $output;
+}
+
+add_shortcode('sqtext', 'shortcode_sqtext');
+
+function shortcode_sqtext($atts, $content = null, $shortcodename = "") {
+    extract(shortcode_atts(array(
+        'class' => ''
+                    ), $atts));
+    $output = '';
+
+    $output .= '<div class="section-m squize-text ' . $class . '"><p>';
+    $output .= do_shortcode($content);
+    $output .= '</p></div>';
 
     return $output;
 }
@@ -124,9 +139,9 @@ function shortcode_htext($atts, $content = null, $shortcodename = "") {
                     ), $atts));
     $output = '';
 
-    $output .= '<h1 class="section-heading font-capa text-green text-uppercase' . $class . '">';
+    $output .= '<h2 class="box-heading text-center' . $class . '" id="' . $id . '">';
     $output .= do_shortcode($content);
-    $output .= '</h1>';
+    $output .= '</h2>';
 
     return $output;
 }
@@ -184,36 +199,48 @@ function pim_services($atts, $content = null, $shortcodename = "") {
 
     ob_start();
     ?>
-    <section id="what-we-do" class="<?php echo $class; ?>"> 
-        <div class="row img-row">
-            <div class="col-lg-12 text-center">
-                <div class="row">
-                    <?php while (have_posts()):the_post(); ?>
-                        <div class="col-sm-2 wwd" id="<?php echo "SPID-" . get_the_ID(); ?>" <?php if (!$full) { ?> onclick="window.location.href = '<?php echo site_url('what-we-do'); ?>'" <?php } ?>>
-                            <?php the_post_thumbnail('wwd', array('class' => 'img-responsive')); ?>
-                            <p><?php the_title(); ?></p>
-                            <?php if ($full == 1) { ?>
-                                <span class='arrow-up'></span>
-                            <?php } ?>
-                        </div>
-                    <?php endwhile; ?>
+    <div class="section-m service">
+        <div class="row">
+            <?php while (have_posts()):the_post(); ?>
+                <div class="col-sm-3 section-p service-item"  id="<?php echo "SVID-" . get_the_ID(); ?>" >
+                    <?php the_post_thumbnail('service', array('class' => 'img-responsive')); ?>
+                    <p><?php the_title(); ?></p>
                 </div>
-            </div>
+            <?php endwhile; ?>
         </div>
-        <?php if ($full == 1) { ?>
-            <hr class="line">
-            <section class="row in-details">
-                <?php while (have_posts()):the_post(); ?>
-                    <div class="col-lg-12 text-center wwd-d" data-atr="#<?php echo "SPID-" . get_the_ID(); ?>">
-                        <div class="innerer-offset-content">
-                            <?php the_content(); ?>
-                        </div>
-                    </div>
-                <?php endwhile; ?>
-            </section>
-        <?php } ?>
-    </section>
+    </div>
+    <?php
+    wp_reset_query();
 
+    $output = ob_get_clean();
+
+    return $output;
+}
+
+add_shortcode('team', 'pim_team');
+
+function pim_team($atts, $content = null, $shortcodename = "") {
+
+    extract(shortcode_atts(array(
+        "limit" => '6',
+        'full' => '0',
+        'class' => ''
+                    ), $atts));
+    $type = 'service';
+    query_posts("post_type=" . $type . "&showposts=" . $limit . "&post_status=publish&order=ASC");
+
+    ob_start();
+    ?>
+    <div class="section-m team">
+        <div class="row">
+            <?php while (have_posts()):the_post(); ?>
+                <div class="col-sm-3 section-p team-item"  id="<?php echo "TM-" . get_the_ID(); ?>" >
+                    <?php the_post_thumbnail('service', array('class' => 'img-responsive')); ?>
+                    <p><?php the_title(); ?></p>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
     <?php
     wp_reset_query();
 
@@ -234,7 +261,7 @@ function bs_collapsibles($atts, $content = null) {
     $defaults = array();
     extract(shortcode_atts($defaults, $atts));
 
-    // Extract the tab titles for use in the tab widget.
+// Extract the tab titles for use in the tab widget.
     preg_match_all('/collapse title="([^\"]+)"/i', $content, $matches, PREG_OFFSET_CAPTURE);
 
     $tab_titles = array();

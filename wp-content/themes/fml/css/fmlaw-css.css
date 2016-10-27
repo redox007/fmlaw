@@ -73,6 +73,11 @@ and open the template in the editor.
     background-size: cover;
     background-position: center center;
 }
+.what-we-do{
+    background: url("../img/what-we-do.jpg");
+    background-size: cover;
+    background-position: center center;
+}
 
 .news-latter .form-control{
     width: 100%;
@@ -156,7 +161,8 @@ and open the template in the editor.
     color: #006a9a;
 }
 .footer-top h4{
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .relataed-area .item img{margin: 0 auto;}
@@ -171,4 +177,25 @@ and open the template in the editor.
     border: 2px solid #fff;
     color: #fff;
     background: transparent;
+}
+
+#footer .contact-bottom{
+    list-style-type: none;
+    padding: 0;
+}
+#footer .contact-bottom li a {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #006a9a;
+}
+#footer .contact-bottom li  {
+    display: inline-block;  
+}
+.text-white p{
+    color: #fff;
+}
+
+.footer-top p{
+    font-size: 13px;
 }

@@ -1,28 +1,36 @@
-
 <footer id="footer">
     <div class="footer-top section-p">
         <div class="container text-white">
             <div class="row">
                 <div class="col-sm-3">
-                    <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo-footer.jpg" />
+                    <?php
+                    $fiid = get_option('fmlaw_flogo');
+                    if (!$fiid) {
+                        $fiid = get_bloginfo('template_url') . "/img/logo-footer.jpg";
+                    }
+                    ?>
+                    <img src="<?php echo $fiid ?>" class="img-responsive" />
                 </div>
-                <div class="col-sm-3">
-                    <h4 class="title ">Location</h4
-                    <p>176 Brisbane Street Ipswich Qld 4305</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="title">Contact</h4
-                    <p>176 Brisbane Street Ipswich Qld 4305</p>
-                </div>
-                <div class="col-sm-3">
-                    <h4 class="title">Quick Links</h4
-                    <p>176 Brisbane Street Ipswich Qld 4305</p>
+                <div class="col-sm-9">
+                    <div class="row">
+                        <?php if (is_active_sidebar('ftbx')) : ?>
+                            <?php dynamic_sidebar('ftbx'); ?>
+                        <?php endif; ?>
+                        <div class="col-sm-3">
+                            <h4 class="title">Connect</h4>
+                            <ul class="contact-bottom">
+                                <li class="fb"><a href="<?php echo get_option('fmlaw_fb');
+                        ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="linkedin"><a href="<?php echo get_option('fmlaw_in'); ?>"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="footer-bottom">
-        <div class="text-center text-white">Fallu McMillan Pvt ltd @copy | Website by Suchandan Haldar </div>
+        <div class="text-center text-white"><?php echo get_option('fmlaw_footer_text'); ?></div>
     </div>
 </footer>
 <!-- jQuery -->
@@ -40,7 +48,7 @@
 
 <script type="text/javascript">
     jQuery(function ($) {
-//        $('.wwd').equalHeights();
+        //        $('.wwd').equalHeights();
         $('ul.sub-menu').each(function (i, e) {
             $(e).append('<span class="angle"><img class="img-responsive" src="<?php bloginfo('template_url') ?>/img/arrow-up.png" /></span>');
         });

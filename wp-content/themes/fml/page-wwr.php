@@ -4,13 +4,8 @@
  */
 ?>
 <?php get_header(); ?>
-<div class="banner static section-pd" style="background-image: url('<?php echo get_bloginfo('template_url'); ?>/img/page-banner.jpg')">
-    <h2 class="title text-center text-white section-m">Lighting the way whatever your situation</h2>
-    <div class="arrow-down text-center text-white">
-        <span class="glyphicon glyphicon-menu-down"></span>
-    </div>
-</div>
-<div class="section-pd what-we-do">
+<?php get_template_part('templates/tpl', 'static-banner'); ?>
+<div class="section-pd">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -84,103 +79,8 @@
         </div>
     </div>
 </div>
-<div class="section-pd who-we-are">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="box-heading text-center text-white">What We Do</h2>
-                <div class="section-m squize-text">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d'art
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d
-                    </p>
-                </div>
-                <div class="text-center">
-                    <a class="btn btn-lrn-more btn-lrn-more-white" href="#">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section-pd news-latter">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <form class="form-inline">
-                    <div class="row">
-                        <div class="form-group col-sm-3">
-                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                        </div>
-                        <div class="form-group  col-sm-3">
-                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                        </div>
-                        <div class="form-group  col-sm-3">
-                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                        </div>
-                        <div class="form-group  col-sm-3">
-                            <button type="submit" class="btn form-control contact-buttton">Send invitation</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section-pd whats-new">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="box-heading text-center text-white section-bm">What We Do</h2>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/news-1.png" class="img-responsive" />
-                        <div class="section-m">
-                            <h3 class="news-heading">Topical headline bold style here</h3>
-                            <p>Topical headline bold style here  Adipisicing elit, sed do eius Topical headline bold style here  Adipisicing elit, sed do eiusTopical headline bold style here  Adipisicing elit, sed do eius</p>
-                        </div>
-                        <div class="text-center">
-                            <a class="btn btn-lrn-more btn-lrn-more-white" href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/news-2.png" class="img-responsive" />
-                        <div class="section-m">
-                            <h3 class="news-heading">Topical headline bold style here</h3>
-                            <p>Topical headline bold style here  Adipisicing elit, sed do eius Topical headline bold style here  Adipisicing elit, sed do eiusTopical headline bold style here  Adipisicing elit, sed do eius</p>
-                        </div>
-                        <div class="text-center">
-                            <a class="btn btn-lrn-more btn-lrn-more-white" href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/news-3.png" class="img-responsive" />
-                        <div class="section-m">
-                            <h3 class="news-heading">Topical headline bold style here</h3>
-                            <p>Topical headline bold style here  Adipisicing elit, sed do eius Topical headline bold style here  Adipisicing elit, sed do eiusTopical headline bold style here  Adipisicing elit, sed do eius</p>
-                        </div>
-                        <div class="text-center">
-                            <a class="btn btn-lrn-more btn-lrn-more-white" href="#">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section-pd loook-forward">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="box-heading text-center text-blue section-bm">WE LOOK FORWARD TO WORKING WITH YOU</h2>
-                <div class="text-center">
-                    <a class="btn btn-lrn-more text-uppercase" href="#">Contact Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php get_template_part('templates/tpl', 'what-we-do'); ?>
+<?php get_template_part('templates/tpl', 'newslatter'); ?>
+<?php get_template_part('templates/tpl', 'news'); ?>
+<?php get_template_part('templates/tpl', 'contact'); ?>
 <?php get_footer(); ?>
-

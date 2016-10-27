@@ -19,7 +19,11 @@
             'slug' => 'metabox',
             'name' => 'page'
         ),                 
+        array(
+            'folder' => 'boxes',
+            'slug' => 'metabox',
+            'name' => 'slider'
+        ),                 
    );  
   add_my_meta_boxes($boxes);
-
 ?>

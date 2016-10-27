@@ -105,7 +105,7 @@
             var ajax_loader = "<?php echo get_bloginfo("template_url") ?>/<?php bloginfo('template_url'); ?>/img/ajax-loader.gif";
         </script>
 
-        <?php $link_custom_css = get_option('pim_custom_css'); ?>
+        <?php $link_custom_css = get_option('fmlaw_custom_css'); ?>
         <?php if ($link_custom_css) { ?>
             <style type="text/css">
     <?php echo $link_custom_css; ?>
@@ -113,7 +113,7 @@
         <?php } ?>
     </head>
 
-    <body id="page-top" <?php body_class('job-seeker-page'); ?>>
+    <body id="page-top" <?php body_class(); ?>>
         <?php get_template_part('templates/tpl', 'contact-form'); ?>
         <nav id="mainNav" class="navbar">
             <div class="container">
@@ -143,26 +143,32 @@
                     $logo_link = get_option('fmlaw_logo_link');
                     $logo_link = ($logo_link) ? $logo_link : home_url();
                     ?>
+                    <?php
+                    $hiid = get_option('fmlaw_hlogo');
+                    if (!$hiid) {
+                        $hiid = get_bloginfo('template_url') . "/img/logo-header.jpg";
+                    }
+                    ?>
                     <a class="logo" href="<?php echo $logo_link; ?>">
-                        <img src="<?php bloginfo('template_url'); ?>/img/logo-header.jpg" class="img-responsive" alt="LOGO">
+                        <img src="<?php echo $hiid; ?>" class="img-responsive" alt="LOGO">
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <?php
-                    $menu = (get_post_meta(get_the_ID(), '_fmlaw_page_menu', true));
+//                    $menu = (get_post_meta(get_the_ID(), '_fmlaw_page_menu', true));
                     $menu_arg = array(
                         'container' => 'ul',
                         'menu_class' => 'nav navbar-nav navbar-right',
                         'menu_id' => 'topnav',
                         'depth' => 3,
                     );
-                    if($menu){
-                        $menu_arg['menu'] = $menu;
-                    }else{
+//                    if($menu){
+//                        $menu_arg['menu'] = $menu;
+//                    }else{
                         $menu_arg['theme_location'] = 'header_menu';
-                    }
+//                    }
                     wp_nav_menu($menu_arg);
                     ?>
                 </div>

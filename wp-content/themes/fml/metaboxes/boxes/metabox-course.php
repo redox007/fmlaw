@@ -1,6 +1,6 @@
 <?php
    global $url_path;
-  $prefix = "_pim_";
+  $prefix = "_fmlaw_";
   
   $config3 = array(
     'id'             => 'course_meta_box',          // meta box id, unique per meta box
