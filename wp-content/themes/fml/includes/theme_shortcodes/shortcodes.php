@@ -202,7 +202,7 @@ function pim_services($atts, $content = null, $shortcodename = "") {
     <div class="section-m service">
         <div class="row">
             <?php while (have_posts()):the_post(); ?>
-                <div class="col-sm-3 section-p service-item"  id="<?php echo "SVID-" . get_the_ID(); ?>" >
+                <div class="col-sm-3 section-p service-item" onclick="window.location.href = '<?php the_permalink(); ?>'" id="<?php echo "SVID-" . get_the_ID(); ?>" >
                     <?php the_post_thumbnail('service', array('class' => 'img-responsive')); ?>
                     <p><?php the_title(); ?></p>
                 </div>
@@ -226,7 +226,7 @@ function pim_team($atts, $content = null, $shortcodename = "") {
         'full' => '0',
         'class' => ''
                     ), $atts));
-    $type = 'service';
+    $type = 'team';
     query_posts("post_type=" . $type . "&showposts=" . $limit . "&post_status=publish&order=ASC");
 
     ob_start();
@@ -235,7 +235,7 @@ function pim_team($atts, $content = null, $shortcodename = "") {
         <div class="row">
             <?php while (have_posts()):the_post(); ?>
                 <div class="col-sm-3 section-p team-item"  id="<?php echo "TM-" . get_the_ID(); ?>" >
-                    <?php the_post_thumbnail('service', array('class' => 'img-responsive')); ?>
+                    <?php the_post_thumbnail('team', array('class' => 'img-responsive')); ?>
                     <p><?php the_title(); ?></p>
                 </div>
             <?php endwhile; ?>

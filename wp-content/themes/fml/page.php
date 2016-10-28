@@ -5,7 +5,7 @@
         <span class="glyphicon glyphicon-menu-down"></span>
     </div>
 </div>
-<div class="section-pd what-we-do">
+<div class="section-pd">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">

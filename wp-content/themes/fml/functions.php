@@ -179,4 +179,13 @@ function rl_wpcf7_form_class_attr($content) {
     return $content;
 }
 
+if (class_exists('MultiPostThumbnails')) {
+    new MultiPostThumbnails(
+            array(
+        'label' => 'Secondary Image',
+        'id' => 'secondary-image-service',
+        'post_type' => 'service'
+            )
+    );
+}
 ?>

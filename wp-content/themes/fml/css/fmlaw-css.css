@@ -199,3 +199,22 @@ and open the template in the editor.
 .footer-top p{
     font-size: 13px;
 }
+
+.service-item{
+    cursor: pointer;
+}
+.box-heading,
+.text-white.box-heading
+{
+    color: #006a9a !important;
+}
+.single-service .whats-new .btn-lrn-more{
+    color: #006a9a;
+    border-color: #006a9a;
+}
+.single-service .whats-new{
+    background-color: #fff;
+}
+.single-service .news-latter{
+    background-color: #f8f8f8;
+}

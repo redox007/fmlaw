@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="box-heading text-center text-white section-bm">What We Do</h2>
+                    <h2 class="box-heading text-center text-white section-bm">What's News</h2>
                     <div class="row">
                         <?php while (have_posts()):the_post(); ?>
                             <div class="col-sm-4">
